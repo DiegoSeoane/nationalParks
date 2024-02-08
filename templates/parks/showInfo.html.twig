@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	{{ actual }}
+{% endblock %}
+{% block body %}
+	{# <h1>{{parks}}</h1> #}
+	<div class="infoPark">
+		<h1>{{name}}</h1>
+		{% if parks != null %}
+			{% for park in parks %}
+				{% if park.nombre == actual %}
+					<h3>{{park.provincia}}</h3>
+					<div class="eco">
+						<h3>Ecosistema:
+							{{park.ecosistema}}</h3>
+						<div class="{{ park.ecosistema|replace({' ':'-', ',': '', '.': '', 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u'}) }}"></div>
+					</div>
+					<img src="{{path('homepage')}}imaxes/{{park.ficheiro}}">
+				
+				{% endif %}
+			{% endfor %}
+
+		{% endif %}
+	</div>
+{% endblock %}

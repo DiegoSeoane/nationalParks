@@ -1,0 +1,94 @@
+/* @import '~bootstrap'; */
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,500;1,700&display=swap');
+
+body{    
+    font-family: 'Mali', cursive;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+.Alta-montaña-atlantica{
+    background-color: gray;
+}
+.Alta-montaña{
+    background-color: brown;
+}
+.Volcanico{
+    background-color: red;
+}
+.Humedal{
+    background-color: aquamarine;
+}
+.media-alta-montaña-mediterranea{
+    background-color: orange;
+}
+.maritimo-terrestre{
+    background-color: rgb(68, 68, 236);
+}
+.Alta-montaña-mediterranea{
+    background-color: green;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: auto;
+    box-shadow: 10px 15px 15px 5px rgba(0, 0, 0, 0.459);
+}
+th,td{
+    border: 1px solid black;
+}
+body{
+    margin: 0;
+    background-color: rgb(23, 218, 175);
+}
+header{
+    background: linear-gradient(0deg, rgba(34,195,159,1) 16%, rgb(26, 168, 138) 100%); 
+    padding: 2rem;    
+    margin: 0px;    
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+.container a{
+    padding: 1rem;
+    width: 300px;
+    height: 300px;
+    margin: 2rem;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow:10px 10px 10px rgba(24, 68, 7, 0.801);    
+}
+.container a img{
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.container a:first-child{
+    margin-top: 2rem;
+}
+.infoPark{    
+    text-align: center;
+}
+.eco{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.eco div{
+    width: 30px;
+    height: 30px;
+    margin-left: 2rem;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+.infoPark img{
+    width: 700px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow:10px 10px 10px rgba(24, 68, 7, 0.801);
+}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	{{ parent() }} - {{ title }}
+{% endblock %}
+{% block body %}
+	{# <table>
+		<tr>
+			<th>Nombre</th>
+			<th>Provincia</th>
+			<th>Ecosistema</th>
+
+			{% for park in parks %}
+			</tr>
+			<td class="{{ park.ecosistema|replace({' ':'-', ',': '', '.': '', 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u'}) }}">
+				<a href="{{ path('app_info',{slug: park.nombre|replace({' ':'-', ',': '', '.': '', 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u'})})}}">{{ park.nombre }} </a>
+			</td>
+			<td class="{{ park.ecosistema|replace({' ':'-', ',': '', '.': '', 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u'}) }}">
+				<a href="{{ path('app_info',{slug: park.nombre|replace({' ':'-', ',': '', '.': '', 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u'})})}}">{{ park.provincia }}</a>
+			</td>
+			<td class="{{ park.ecosistema|replace({' ':'-', ',': '', '.': '', 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u'}) }}">
+				<a href="{{ path('app_info',{slug: park.nombre|replace({' ':'-', ',': '', '.': '', 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u'})})}}">{{ park.ecosistema }}</a>
+			</td>
+		</tr>
+	{% endfor %} #}
+	<div class="container">
+	{% for park in parks %}
+		<a class="{{ park.ecosistema|replace({' ':'-', ',': '', '.': '', 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u'}) }}" href="{{ path('app_info',{slug: park.nombre|replace({' ':'-', ',': '', '.': '', 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u'})})}}">
+		<h3>{{ park.nombre }}</h3>
+		<p>Provincia: {{park.provincia}}</p>
+		<img src="imaxes/{{park.ficheiro}}">
+		</a>
+	{% endfor %}
+	</div>
+
+</table>{% endblock %}
